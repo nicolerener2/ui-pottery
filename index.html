@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="esp">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,52 +9,55 @@
   <body>
     <div>
       <header>
-        <h1>Taller de cerámica</h1>
-        <p>Un espacio para crear piezas con tus propias manos.</p>
-        <img src="/src/interface/taller.svg" width="200" height="200" />
+        <h1 class="fg-black" >Taller de cerámica</h1>
+        <p class="fg-black" >Un espacio para crear piezas con tus propias manos.</p>
+        <img src="/src/interface/taller.svg" width="200" height="200" alt="imagen de ceramica"/>
         <hr />
-        <p>Abierto de lunes a viernes, de 10:00 a 19:00.</p>
+        <p class="fg-black" > Abierto de lunes a viernes, de 10:00 a 19:00.</p>
       </header>
       <main>
         <section>
-          <h4>Próximos talleres</h4>
+          <h2 class="fg-black" >Próximos talleres</h2>
           <ul>
-            <li>Iniciación — USD 25 · Martes 18:00</li>
-            <li>Modelado a mano — USD 20 · Jueves 17:00</li>
-            <li>Esmaltado creativo — USD 18 · Sábado 11:00</li>
+            <li class="fg-black" >Iniciación — USD 25 · Martes 18:00</li>
+            <li class="fg-black" >Modelado a mano — USD 20 · Jueves 17:00</li>
+            <li class="fg-black" >Esmaltado creativo — USD 18 · Sábado 11:00</li>
           </ul>
         </section>
         <section>
-          <h6>Consultas e inscripciones</h6>
+          <h2 class="fg-black" >Consultas e inscripciones</h2>
           <form id="contact-form">
             <div>
-              <input id="name" name="name" type="text" placeholder="Nombre" />
+              <label for="name" class="form-label" >Nombre</label>
+              <input id="name" name="name" class="form-control" type="text" placeholder="Nombre" />
             </div>
             <div>
-              <input id="email" name="email" type="email" placeholder="Correo electrónico" />
+              <label for="email" class="form-label" >Correo electrónico</label>
+              <input id="email" name="email" class="form-control" type="email" placeholder="Correo electrónico" />
             </div>
             <div>
-              <textarea id="message" name="message" rows="3" placeholder="Tu consulta"></textarea>
+              <label for="message" class="form-label" >Tu consulta</label>
+              <textarea id="message" name="message" class="form-control" rows="3" placeholder="Tu consulta"></textarea>
             </div>
             <fieldset>
-              <legend>¿Ya asististe a uno de nuestros cursos?</legend>
-              <div>
-                <input type="radio" id="attended-yes" name="attended" value="yes" required />
-                <label for="attended-yes">Sí</label>
+              <legend class="fg-black" >¿Ya asististe a uno de nuestros cursos?</legend>
+              <div class="form-field" >
+                <input type="radio" class="radio" id="attended-yes" name="attended" value="yes" required />
+                <label class="fg-black" for="attended-yes">Sí</label>
               </div>
-              <div>
-                <input type="radio" id="attended-no" name="attended" value="no" />
-                <label for="attended-no">No, sería mi primera vez</label>
+              <div class="form-field" >
+                <input type="radio" class="radio" id="attended-no" name="attended" value="no" />
+                <label class="fg-black"  for="attended-no">No, sería mi primera vez</label>
               </div>
             </fieldset>
             <div>
-              <label for="notifications">¿Te gustaría recibir notificaciones?</label>
-              <div>
+              <label class="fg-black"  for="notifications">¿Te gustaría recibir notificaciones?</label>
+              <div class="switch">
                 <input type="checkbox" id="notifications" name="notifications" role="switch" switch />
               </div>
             </div>
-            <button type="submit">Enviar consulta</button>
-            <p id="status" role="status"></p>
+            <button class="btn-solid" class="theme-primary" type="submit" class="fg-black" >Enviar consulta</button>
+            <p id="status" class="fg-black"  role="status"></p>
           </form>
         </section>
       </main>
